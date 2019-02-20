@@ -66,7 +66,7 @@ router.put('/:id', (req, res) => {
             .update(req.body)
             .then(count => {
                 if(count){
-                    res.status(200).json({ message: `cohort with id ${req.params.id} was updated to ${req.body}` })
+                    res.status(200).json({ message: `cohort with id ${req.params.id} was updated` })
                 }else{
                     res.status(404).json({ message: "Couldn't find cohort with this ID" })
                 }
